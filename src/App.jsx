@@ -16,16 +16,15 @@ import Resume from './pages/Resume';
 
 function App() {
   const location = useLocation();
-
-  // Check if we are on the resume page
   const isResumePage = location.pathname === '/resume';
 
   return (
-    <div className="bg-white text-gray-900 font-sans">
-      {/* Only show Navbar and Footer if NOT on resume page */}
+    <div className="bg-white text-gray-900 font-sans min-h-screen flex flex-col">
+      {/* Navbar */}
       {!isResumePage && <Navbar />}
 
-      <main>
+      {/* Main Content */}
+      <main className="flex-grow w-full overflow-x-hidden">
         <Routes>
           <Route
             path="/"
@@ -45,6 +44,7 @@ function App() {
         </Routes>
       </main>
 
+      {/* Footer */}
       {!isResumePage && <Footer />}
     </div>
   );

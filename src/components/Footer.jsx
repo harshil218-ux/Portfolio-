@@ -4,9 +4,9 @@ import { FaGithub, FaLinkedin, FaPhoneAlt, FaEnvelope, FaHeart } from 'react-ico
 function Footer() {
   return (
     <footer className="bg-gray-900 text-white pt-12 pb-8 px-4 text-center mt-20">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto flex flex-col items-center">
         {/* Social Links */}
-        <div className="flex justify-center space-x-8 text-2xl mb-6">
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-8 text-2xl mb-6">
           <a
             href="https://github.com/harshil218-ux"
             target="_blank"
@@ -42,9 +42,9 @@ function Footer() {
         </div>
 
         {/* Credit Text */}
-        <p className="text-lg text-gray-300 flex justify-center items-center gap-2">
-          &copy; {new Date().getFullYear()} — Designed & coded with 
-          <FaHeart className="text-red-500 inline ml-1" />
+        <p className="text-base sm:text-lg text-gray-300 flex flex-wrap justify-center items-center gap-2 px-4 text-center">
+          &copy; {new Date().getFullYear()} — Designed & coded with
+          <FaHeart className="text-red-500 inline" />
           <span className="font-semibold text-indigo-400">Harshil Bhavsar</span>
         </p>
       </div>

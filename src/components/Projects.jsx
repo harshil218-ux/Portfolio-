@@ -47,18 +47,20 @@ const projectData = [
 
 function Projects() {
   return (
-    <section id="projects" className="bg-gray-100 py-20 px-6">
+    <section id="projects" className="bg-gray-100 py-16 px-4 sm:px-6 md:px-10">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl font-extrabold text-indigo-600 mb-4">My Projects</h2>
-        <p className="text-gray-500 text-lg mb-12">Here are some of the projects I've built recently</p>
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-indigo-600 mb-4">My Projects</h2>
+        <p className="text-gray-500 text-base sm:text-lg mb-10">
+          Here are some of the projects I've built recently
+        </p>
 
-        <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {projectData.map((project, index) => (
             <article
               key={index}
-              className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition duration-300 flex flex-col overflow-hidden group"
+              className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 flex flex-col overflow-hidden group"
             >
-              <div className="h-56 bg-white flex items-center justify-center overflow-hidden">
+              <div className="h-48 sm:h-56 bg-white flex items-center justify-center overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -66,10 +68,12 @@ function Projects() {
                 />
               </div>
 
-              <div className="p-6 sm:p-4 flex flex-col flex-grow justify-between">
+              <div className="p-5 sm:p-6 flex flex-col flex-grow justify-between">
                 <div className="mb-4">
-                  <h3 className="text-2xl font-bold text-gray-800 mb-2">{project.title}</h3>
-                  <p className="text-gray-600 text-sm mb-4">{project.description}</p>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm sm:text-base mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((techItem, i) => (
                       <span
@@ -86,7 +90,7 @@ function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-auto bg-indigo-600 text-white text-sm py-2 px-4 rounded-xl text-center hover:bg-indigo-700 transition"
+                  className="mt-auto bg-indigo-600 text-white text-sm sm:text-base py-2 px-4 rounded-xl text-center hover:bg-indigo-700 transition"
                 >
                   View Code
                 </a>
