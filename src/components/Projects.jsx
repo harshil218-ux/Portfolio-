@@ -42,7 +42,15 @@ const projectData = [
     image: './images/Memory Game.png',
     github: 'https://github.com/harshil218-ux/Memory-Game.git',
     tech: ['React', 'JavaScript', 'CSS']
-  }
+  },
+  {
+  title: 'Simple Bank Management',
+  description: 'A simple Java Swing GUI application for basic banking operations like deposit, withdraw, and balance check.',
+  image: './images/Simple Bank System.png',
+  github: 'https://github.com/harshil218-ux/Simple-Banking-System.git',
+  tech: ['Java', 'Swing', 'OOP']
+}
+
 ];
 
 function Projects() {
@@ -95,6 +103,7 @@ function Projects() {
                   View Code
                 </a>
               </div>
+                        
             </article>
           ))}
         </div>
